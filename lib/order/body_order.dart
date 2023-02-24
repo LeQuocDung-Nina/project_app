@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../constants.dart';
+import '../pay/model/product_order_item_model.dart';
+import '../pay/wedget/product_order_item.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -141,53 +144,15 @@ class _ScrollViewOrderState extends State<ScrollViewOrder> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         const SizedBox(height: 15,),
-        SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              for(int i = 0; i <= 13; i++)
-                Container(
-                  margin: EdgeInsets.only(bottom: 10),
-                  child: Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        width: 80,
-                        height: 80,
-                        margin: EdgeInsets.only(right: 15.0),
-                        child: Image.asset("assets/images/product1.png"),
-                      ),
-                      Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            const Text("Áo thun nữ thời trang",style: TextStyle(color: backtitleColor,fontSize: 15),),
-                            RichText(text: const TextSpan(
-                                style: TextStyle(color: priceColor,fontSize: 18),
-                                children: [
-                                  TextSpan(text: "290.000",),
-                                  TextSpan(text: "đ",),
-                                ]
-                            )),
-                            RichText(text: const TextSpan(
-                                style: TextStyle(color: bLtitle2Color,fontSize: 15),
-                                children: [
-                                  TextSpan(text: "x",),
-                                  TextSpan(text: "1",),
-                                ]
-                            )),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-            ],
-          ),
-
+        AlignedGridView.count(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: products.length,
+          crossAxisCount: 1,
+          mainAxisSpacing: 20,
+          crossAxisSpacing: 20,
+          itemBuilder: (context, index) => ProductOrderItem(
+              product_order_item: products[index]),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

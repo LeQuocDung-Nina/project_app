@@ -1,5 +1,5 @@
 import 'account/account_screen.dart';
-import 'order/order.dart';
+import 'order/order_screen.dart';
 import 'waiting/waiting_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

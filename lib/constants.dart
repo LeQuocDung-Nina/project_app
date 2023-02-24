@@ -20,3 +20,4 @@ const greyreview = Color(0xFF999999);
 const greytitle = Color(0xFF797979);
 const bgbutton = Color(0xFFEFEFEF);
 const greyplus = Color(0xFFDDDDE3);
+const greysuccessplus = Color(0xFF747474);

@@ -18,7 +18,7 @@ class OrderScreen extends StatelessWidget {
       ),
       body: Container(
         color: Colors.white,
-        padding: EdgeInsets.symmetric(vertical: 0,horizontal: 15.0),
+        padding: EdgeInsets.symmetric(vertical: 20,horizontal: 15.0),
         child: Body(),
       ),
 
