@@ -1,0 +1,4 @@
+113.161.89.144()--update--order([["","id","=","66"],["AND","id_user","=","14293"]]) (13:20:21 12/01/2023)
+113.161.89.144()--update--order_group([["","id_order","=","66"]]) (13:20:21 12/01/2023)
+113.161.88.45()--query--tables(delete from table_member_favourite where id_member = '14287' and id_variant = '62' and type = 'thoi-trang' and variant = 'product') (14:32:51 12/01/2023)
+113.161.88.45()--query--tables(delete from table_member_favourite where id_member = '14287' and id_variant = '62' and type = 'thoi-trang' and variant = 'product') (14:32:51 12/01/2023)
