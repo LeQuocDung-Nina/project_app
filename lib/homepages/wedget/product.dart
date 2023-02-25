@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import '../../models/Product_model.dart';
+import '../model/Product_model.dart';
 import '../../product_detail/product_detail.dart';
 
 class ProductItem extends StatelessWidget {
@@ -15,7 +15,7 @@ class ProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-       Navigator.push(context, 
+       Navigator.push(context,
        MaterialPageRoute(builder: (context) => ProductDetail(product: product),),);
       },
       child: Column(

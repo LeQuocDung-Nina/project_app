@@ -4,7 +4,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import '../constants.dart';
 import '../filter/filter_product.dart';
 import '../homepages/wedget/product.dart';
-import '../models/Product_model.dart';
+import '../homepages/model/Product_model.dart';
 
 class ProductNes extends StatelessWidget {
   const ProductNes({Key? key}) : super(key: key);
@@ -40,17 +40,17 @@ class ProductNes extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.symmetric(vertical: 0,horizontal: 20),
-              child: AlignedGridView.count(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                // itemCount: 6,
-                itemCount: products.length,
-                crossAxisCount: 2,
-                mainAxisSpacing: 20,
-                crossAxisSpacing: 20,
-                itemBuilder: (context, index) => ProductItem(
-                    product: products[index]),
-              ),
+              // child: AlignedGridView.count(
+              //   shrinkWrap: true,
+              //   physics: const NeverScrollableScrollPhysics(),
+              //   // itemCount: 6,
+              //   itemCount: products.length,
+              //   crossAxisCount: 2,
+              //   mainAxisSpacing: 20,
+              //   crossAxisSpacing: 20,
+              //   itemBuilder: (context, index) => ProductItem(
+              //       product: products[index]),
+              // ),
             )
           ],
         ),

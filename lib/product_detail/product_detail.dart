@@ -4,7 +4,7 @@ import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.da
 
 
 import '../constants.dart';
-import '../models/Product_model.dart';
+import '../homepages/model/Product_model.dart';
 import 'appbar_product_detail.dart';
 
 class ProductDetail extends StatelessWidget {
