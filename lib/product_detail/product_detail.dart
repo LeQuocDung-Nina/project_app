@@ -23,7 +23,7 @@ class ProductDetail extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(product.image,width: double.maxFinite,fit: BoxFit.fill,),
+            Image.asset(product.photo.toString(),width: double.maxFinite,fit: BoxFit.fill,),
             const SizedBox(height: 25,),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 0,horizontal: 25),
@@ -33,7 +33,7 @@ class ProductDetail extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(product.title,style: TextStyle(fontWeight: FontWeight.w400,fontSize: 23,color: bLtitleColor),),
+                      Text(product.namevi.toString(),style: TextStyle(fontWeight: FontWeight.w400,fontSize: 23,color: bLtitleColor),),
                       const Icon(Icons.favorite_border,color: priceColor,)
                     ],
                   ),
@@ -44,7 +44,7 @@ class ProductDetail extends StatelessWidget {
                     children: [
                       RichText(
                           text:  TextSpan(
-                          text: product.price.toString(),
+                          text: product.regularPrice.toString(),
                           style: TextStyle(color: priceColor,fontSize: 21,),
                           children: const <TextSpan>[
                              TextSpan(text: 'đ'),
@@ -92,7 +92,7 @@ class ProductDetail extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20,),
-                  Text(product.description,style: TextStyle(color: desproduct,fontSize: 18,fontWeight: FontWeight.w400,),),
+                  Text(product.descvi.toString(),style: TextStyle(color: desproduct,fontSize: 18,fontWeight: FontWeight.w400,),),
                 ],
               ),
             ),

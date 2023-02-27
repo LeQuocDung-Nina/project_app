@@ -28,19 +28,19 @@ class ProductItem extends StatelessWidget {
               // color: product.color,
               borderRadius: BorderRadius.circular(16),
             ),
-            child: Image.asset(product.image,fit: BoxFit.cover,width: double.infinity,),
+            child: Image.network(product.photo.toString()),
           ),
           Container(
             margin: EdgeInsets.only(bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(product.title,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: backtitleColor),),
+                Text(product.namevi.toString(),style: TextStyle(fontSize: 15,fontWeight: FontWeight.w400,color: backtitleColor),),
                 const Icon(Icons.favorite_border,color: priceColor,),
               ],
             ),
           ),
-          Text(product.price.toString(),style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400,color: priceColor),),
+          Text(product.regularPrice.toString(),style: TextStyle(fontSize: 17,fontWeight: FontWeight.w400,color: priceColor),),
 
         ],
       ),

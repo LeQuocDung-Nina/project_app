@@ -48,7 +48,7 @@ dependencies:
 #  smooth_star_rating: ^1.1.1
 #  http: ^0.13.5
   dio: ^5.0.1
-  get: ^4.6.5
+#  get: ^4.6.5
 
 
 dev_dependencies:

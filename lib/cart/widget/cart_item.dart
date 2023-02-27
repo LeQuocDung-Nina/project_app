@@ -6,10 +6,15 @@ import '../../constants.dart';
 
 
 bool isChecked = true;
-class CartItem extends StatelessWidget {
+class CartItem extends StatefulWidget {
   const CartItem({Key? key, required this.cart}) : super(key: key);
   final Cart cart;
 
+  @override
+  State<CartItem> createState() => _CartItemState();
+}
+
+class _CartItemState extends State<CartItem> {
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -27,19 +32,19 @@ class CartItem extends StatelessWidget {
           inactiveIcon: null,
         ),
         const SizedBox(width: 10,),
-        Image.asset(cart.image),
+        Image.asset(widget.cart.image),
         const SizedBox(width: 10,),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(cart.title,style: const TextStyle(color: backtitleColor,fontSize: 15,fontWeight: FontWeight.w400),),
+              Text(widget.cart.title,style: const TextStyle(color: backtitleColor,fontSize: 15,fontWeight: FontWeight.w400),),
               const SizedBox(height: 10,),
               RichText(
                 text: TextSpan(
                   style: const TextStyle(color: priceColor,fontSize: 17,fontWeight: FontWeight.w400),
-                  text: cart.pirce.toString(),
+                  text: widget.cart.pirce.toString(),
                   children: const <TextSpan>[
                     TextSpan(text: 'đ'),
                   ],
@@ -90,7 +95,4 @@ class CartItem extends StatelessWidget {
       ],
     );
   }
-}
-
-void setState(Null Function() param0) {
 }
